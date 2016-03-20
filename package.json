@@ -1,5 +1,5 @@
 {
-  "name": "impacto-esperanza-real-time",
+  "name": "impacto-esperanza-counter",
   "version": "0.0.0",
   "description": "real time app to show delivered books on the 'Impacto Esperanza' campain in Argentina",
   "main": "index.js",
@@ -8,7 +8,9 @@
     "start": "nodemon index"
   },
   "keywords": [
-    "real-time"
+    "real-time",
+    "socket.io",
+    "impacto-esperanza"
   ],
   "author": "gillchristian",
   "license": "MIT",
