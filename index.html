@@ -1,0 +1,36 @@
+<!doctype html>
+<html ng-app="impactoApp">
+  <head>
+    <title>Impacto Esperanza</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="public/styles/index.css">
+  </head>
+  <body ng-controller="CounterController as vm">
+
+    <header></header>
+    <main>
+      <span>{{vm.count}}</span>
+      <button class="btn btn-primary" type="button" ng-click="vm.addBook()">Libro entregado</button>
+
+    </main>
+    <footer></footer>
+
+    <!-- Dependencies -->
+    <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+    <script src="node_modules/angular/angular.js"></script>
+    <script src="public/dependencies/angular-socket-io/socket.min.js"></script>
+
+    <!-- App scripts -->
+    <script src="public/app/app.js"></script>
+    <!-- Services Module -->
+    <script src="public/app/services/services.module.js"></script>
+    <script src="public/app/services/socket.service.js"></script>
+    <!-- Counter Module -->
+    <script src="public/app/counter/counter.module.js"></script>
+    <script src="public/app/counter/counter.controller.js"></script>
+
+    <script>
+    </script>
+  </body>
+</html>
