@@ -6,6 +6,7 @@
    */
   angular.module('impactoApp', [
     'btford.socket-io',
+    'ngCookies',
     'impactoApp.counter',
     'impactoApp.services',
   ]);

@@ -41,10 +41,10 @@
  * Third party CSS
  *
  * ---------------------
- * |--- Some File
+ * |--- Flex Grid
  * ---------------------
  */
-/* --- some file --- */
+/* --- Flex Grid --- */
 /* --- Base ----------- */
 /**
  * Base styles
@@ -53,10 +53,28 @@
  * Base typography & raw elements
  *
  * ---------------------
- * |--- Some File
+ * |--- Layout
  * ---------------------
  */
-/* --- some file --- */
+/* --- Layout --- */
+body {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+
+main {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1; }
+
 /* --- Objects -------- */
 /**
  * Objects styles
@@ -65,10 +83,58 @@
  * Layout driven, structural objects.
  *
  * ---------------------
- * |--- Some File
+ * |--- Header
+ * |--- Counter
+ * |--- Progress
+ * |--- Controls
+ * |--- Personal
  * ---------------------
  */
-/* --- some file --- */
+/* --- Header --- */
+.header {
+  height: 85px;
+  width: 100vw;
+  background-color: lightgray;
+  padding: 5px 10px; }
+
+/* --- Counter --- */
+.counter {
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 62px; }
+
+/* --- Progress --- */
+.progress-section {
+  padding: 10px; }
+
+.progress-bar {
+  min-width: 3em; }
+
+/* --- Controls --- */
+.controls {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  padding: 0 10px; }
+  .controls button {
+    margin: 5px; }
+
+/* --- Personal --- */
+.personal {
+  padding: 10px; }
+
 /* --- Components ----- */
 /**
  * Components styles

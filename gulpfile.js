@@ -17,7 +17,7 @@ var TASKS           = require('./gulp-helpers/tasks'),
 // --------------------------------------------------------
 gulp.task(TASKS.dev.style, () => {
   return gulp.src(FILES.css.source)
-    .pipe( sass().on('error' , err => {
+    .pipe( sass().on('error' , function(err) {
       notify({title: 'CSS Task'}).write(err.line  + ': ' + err.message);
       return this.emit('end')
     } ))

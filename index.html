@@ -8,10 +8,39 @@
   </head>
   <body ng-controller="CounterController as vm">
 
-    <header></header>
+    <header class="header">
+      <h1>logo</h1>
+    </header>
     <main>
-      <h1>{{vm.count}}</h1>
-      <button class="btn btn-primary" type="button" ng-click="vm.addBook()">Libro entregado</button>
+      <div class="counter">
+        <span ng-bind="vm.count | number"></span>
+      </div>
+      <div class="progress-section">
+        <div class="progress">
+          <div
+            class="progress-bar progress-bar-striped active"
+            role="progressbar"
+            style="width: {{ vm.progress < 100 ? vm.progress : 100 }}%"
+            ng-class="{'progress-bar-success': vm.progress >= 75, 'progress-bar-warning': vm.progress <= 25, }"
+            ng-bind="(vm.progress | number:0) + '%'">
+            </div>
+        </div>
+        <p>Objetivo: {{vm.goal | number}} libros en {{vm.place}}</p>
+        <div class="alert alert-success" role="alert" ng-show="vm.progress >= 100">El objetivo fue alcanzado! Sigue entregando :)</div>
+      </div>
+      <div class="controls">
+        <button class="btn btn-primary" type="button" ng-click="vm.addBook()"><span class="glyphicon glyphicon-plus"></span> <span class="glyphicon glyphicon-book"></span></button>
+      </div>
+      <div class="controls">
+        <!--
+        -->
+        <button class="btn btn-primary" type="button" ng-click="vm.addBook(10000)">Agregar 10k libros</button>
+        <!--
+        -->
+        <button class="btn btn-primary" type="button" ng-click="vm.addBook(-10000)">Restar 10k libros</button>
+      </div>
+
+      <div class="personal"><span class="glyphicon glyphicon-book"> Entregué {{vm.ownTotal | number}}</div>
 
     </main>
     <footer></footer>
@@ -19,6 +48,7 @@
     <!-- Dependencies -->
     <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
     <script src="node_modules/angular/angular.js"></script>
+    <script src="node_modules/angular-cookies/angular-cookies.js"></script>
     <script src="public/dependencies/angular-socket-io/socket.min.js"></script>
 
     <!-- App scripts -->

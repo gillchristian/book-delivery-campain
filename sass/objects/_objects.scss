@@ -5,9 +5,21 @@
  * Layout driven, structural objects.
  *
  * ---------------------
- * |--- Some File
+ * |--- Header
+ * |--- Counter
+ * |--- Progress
+ * |--- Controls
+ * |--- Personal
  * ---------------------
  */
- 
-/* --- some file --- */
-//@import 'some-file';
+
+/* --- Header --- */
+@import 'header';
+/* --- Counter --- */
+@import 'counter';
+/* --- Progress --- */
+@import 'progress';
+/* --- Controls --- */
+@import 'controls';
+/* --- Personal --- */
+@import 'personal';

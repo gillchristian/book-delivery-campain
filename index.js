@@ -13,7 +13,7 @@ app.get('/', function(req, res){
   res.sendFile(__dirname + '/index.html');
 });
 
-var bookCount = 0;
+var bookCount = 10000;
 
 io.on('connection', function(socket){
   io.emit('current count', bookCount);
