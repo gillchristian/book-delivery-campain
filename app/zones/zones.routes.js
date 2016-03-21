@@ -10,7 +10,6 @@ function zonesRoutes(app, express){
   router.route('/')
     // --- get all zones ---
     .get((req, res)=>{
-      console.log(Zone);
 
       Zone.find({}, (err, zones)=>{
         if (err) throw err;
