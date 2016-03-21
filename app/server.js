@@ -11,6 +11,13 @@ var zonesRoutes = require('./zones/zones.routes')(app, express);
 
 module.exports = server;
 
+/**
+ * Handles the server setup
+ *
+ * @param {int}  port number
+ * @param {string}  path
+ * @param {string}  database access
+ */
 function server(port, path, db){
 
   // support url encoded bodies
@@ -44,6 +51,7 @@ function server(port, path, db){
   sockets(http);
 
   // --- start the server ---
+  console.log(port);
   console.log(process.env.PORT);
   http.listen(port, function(){
     console.log(`listening on *:${port}`);
