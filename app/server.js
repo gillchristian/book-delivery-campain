@@ -44,6 +44,7 @@ function server(port, path, db){
   sockets(http);
 
   // --- start the server ---
+  console.log(process.env.PORT);
   http.listen(port, function(){
     console.log(`listening on *:${port}`);
   });
