@@ -3,3 +3,4 @@ typings
 .vscode
 jsconfig.json
 *.log
+db.txt
