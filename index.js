@@ -1,30 +1,6 @@
-
 'use strict';
-var express = require('express');
-var app     = express();
-var http    = require('http').Server(app);
-var io      = require('socket.io')(http);
+var server = require('./app/server');
 
-// set static files location ------------------------------------------------
-// used for requests that our frontend will make ----------------------------
-app.use(express.static(__dirname));
+var config = require('./app/config');
 
-app.get('/', function(req, res){
-  res.sendFile(__dirname + '/index.html');
-});
-
-var bookCount = 10000;
-
-io.on('connection', function(socket){
-  io.emit('current count', bookCount);
-
-  socket.on('add books', function(count){
-    bookCount += count || 1;
-    io.emit('increase count', bookCount);
-  });
-
-});
-
-http.listen(process.env.PORT || 3000, function(){
-  console.log('listening on *:3000');
-});
+server(config.port, __dirname, config.db);
