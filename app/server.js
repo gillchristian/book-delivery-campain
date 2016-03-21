@@ -51,9 +51,8 @@ function server(port, path, db){
   sockets(http);
 
   // --- start the server ---
-  console.log(port);
-  console.log(process.env.PORT);
-  http.listen(port, function(){
+  // TODO: add port param from config
+  http.listen(process.env.PORT, function(){
     console.log(`listening on *:${port}`);
   });
 }
