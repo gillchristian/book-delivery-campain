@@ -13,10 +13,7 @@
       var vm = this;
 
       // --- exposed properties ---
-      vm.contenders = [
-        {id: 1, name: 'sarara', selected: false},
-        {id: 2, name: 'sarasa', selected: false},
-      ];
+      vm.contenders = [];
       vm.emitedVote = false;
 
       // --- exposed methods ---
