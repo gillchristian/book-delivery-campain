@@ -5,7 +5,7 @@
   /**
    * Counter controller
    */
-  angular.module('impactoApp.counter')
+  angular.module('votesApp.counter')
     .controller('CounterController', CounterController);
 
     function CounterController(socket, $cookies){

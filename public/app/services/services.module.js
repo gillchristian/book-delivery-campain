@@ -4,6 +4,6 @@
   /**
    * App services module
    */
-  angular.module('impactoApp.services', []);
+  angular.module('votesApp.services', []);
 
 })();

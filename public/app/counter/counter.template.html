@@ -1,0 +1,29 @@
+      <div class="counter">
+        <span ng-bind="vm.count | number"></span>
+      </div>
+      <div class="progress-section">
+        <div class="progress">
+          <div
+            class="progress-bar progress-bar-striped active"
+            role="progressbar"
+            style="width: {{ vm.progress < 100 ? vm.progress : 100 }}%"
+            ng-class="{'progress-bar-success': vm.progress >= 75, 'progress-bar-warning': vm.progress <= 25, }"
+            ng-bind="(vm.progress | number:0) + '%'">
+            </div>
+        </div>
+        <p>Objetivo: {{vm.goal | number}} libros en {{vm.place}}</p>
+        <div class="alert alert-success" role="alert" ng-show="vm.progress >= 100">El objetivo fue alcanzado! Sigue entregando :)</div>
+      </div>
+      <div class="controls">
+        <button class="btn btn-primary" type="button" ng-click="vm.addBook()"><span class="glyphicon glyphicon-plus"></span> <span class="glyphicon glyphicon-book"></span></button>
+      </div>
+      <div class="controls">
+        <!--
+        -->
+        <button class="btn btn-primary" type="button" ng-click="vm.addBook(10000)">Agregar 10k libros</button>
+        <!--
+        -->
+        <button class="btn btn-primary" type="button" ng-click="vm.addBook(-10000)">Restar 10k libros</button>
+      </div>
+
+      <div class="personal"><span class="glyphicon glyphicon-book"> Entregué {{vm.ownTotal | number}}</div>

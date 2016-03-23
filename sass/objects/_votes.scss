@@ -1,0 +1,9 @@
+// --- votes objects styles ---
+.vote {
+  &-item {
+    .selected{
+      border: 2px solid black;
+      background-color: lightgray;
+    }
+  }
+}

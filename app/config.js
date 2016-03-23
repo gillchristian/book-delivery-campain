@@ -1,7 +1,7 @@
 'use strict';
 
 let config = {
-  port: 3000 || process.env.PORT,
+  port: process.env.PORT || 8080,
   db: process.env.db,
 }
 

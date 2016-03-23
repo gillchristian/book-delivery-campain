@@ -4,15 +4,16 @@
   /**
    * Main Angular app module
    */
-  angular.module('impactoApp', [
+  angular.module('votesApp', [
+    'ui.router',
     'btford.socket-io',
     'ngCookies',
-    'impactoApp.counter',
-    'impactoApp.services',
+    'votesApp.counter',
+    'votesApp.services',
+    'votesApp.votes',
   ]);
 /*
 [
-  'ui.router',
   'ui.bootstrap'
 ]
 */

@@ -4,6 +4,6 @@
   /**
    * Counter module
    */
-  angular.module('impactoApp.counter',[]);
+  angular.module('votesApp.counter',[]);
 
 })();

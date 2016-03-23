@@ -1,0 +1,24 @@
+<button
+  type="button"
+  class="btn btn-success"
+  ng-disabled="vm.emitedVote"
+  ng-click="vm.vote()">Votar</button>
+
+<div class="container">
+  <div
+    class="alert alert-success col-md-6 col-md-offset-3"
+    ng-show="vm.emitedVote">
+    gracias por votar, espera al proximo conjuto de votos
+  </div>
+  <div
+    class="vote-item col-md-6 col-md-offset-3"
+    ng-repeat="item in vm.contenders"
+    ng-hide="vm.emitedVote">
+    <div
+      class="thumbnail"
+      ng-class="{selected: item.selected}"
+      ng-click="vm.select(item)"
+      ng-bind="item.name">
+    </div>
+  </div>
+</div>

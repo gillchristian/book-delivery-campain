@@ -4,7 +4,7 @@
   /**
    * Socket service
    */
-  angular.module('impactoApp.services')
+  angular.module('votesApp.services')
     .factory('socket', socket);
 
     function socket(socketFactory) {

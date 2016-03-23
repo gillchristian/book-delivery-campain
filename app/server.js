@@ -25,7 +25,7 @@ function server(port, path, db){
   app.use(bodyParser.json());
 
   // CORS requres
-  app.use(function(req, res, next) {
+  app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST');
     res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type, Authorization');
@@ -33,26 +33,26 @@ function server(port, path, db){
   });
 
   // connect to the db
-  mongoose.connect(db);
+  //mongoose.connect(db);
 
   // statics files location
   // TODO: change location for build
   app.use(express.static(path));
 
-  app.get('/', function(req, res){
+  app.get('/', (req, res)=>{
     res.sendFile(path + '/index.html');
   });
 
   // --- API Routes ---
   // zones
-  app.use('/api/zones', zonesRoutes);
+  //app.use('/api/zones', zonesRoutes);
 
   // set the sockets handlers
   sockets(http);
 
   // --- start the server ---
   // TODO: add port param from config
-  http.listen(process.env.PORT, function(){
+  http.listen(port, ()=>{
     console.log(`listening on *:${port}`);
   });
 }
