@@ -10,11 +10,5 @@
     'ngCookies',
     'votesApp.counter',
     'votesApp.services',
-    'votesApp.votes',
   ]);
-/*
-[
-  'ui.bootstrap'
-]
-*/
 })();

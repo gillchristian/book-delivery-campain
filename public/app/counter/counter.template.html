@@ -11,8 +11,8 @@
             ng-bind="(vm.progress | number:0) + '%'">
             </div>
         </div>
-        <p>Objetivo: {{vm.goal | number}} libros en {{vm.place}}</p>
-        <div class="alert alert-success" role="alert" ng-show="vm.progress >= 100">El objetivo fue alcanzado! Sigue entregando :)</div>
+        <p>Goal: {{vm.goal | number}} books to deliver in {{vm.place}}</p>
+        <div class="alert alert-success" role="alert" ng-show="vm.progress >= 100">You reached the goal! Keep delivering more :)</div>
       </div>
       <div class="controls">
         <button class="btn btn-primary" type="button" ng-click="vm.addBook()"><span class="glyphicon glyphicon-plus"></span> <span class="glyphicon glyphicon-book"></span></button>
@@ -20,10 +20,10 @@
       <div class="controls">
         <!--
         -->
-        <button class="btn btn-primary" type="button" ng-click="vm.addBook(10000)">Agregar 10k libros</button>
+        <button class="btn btn-primary" type="button" ng-click="vm.addBook(10000)">Add 10k books</button>
         <!--
         -->
-        <button class="btn btn-primary" type="button" ng-click="vm.addBook(-10000)">Restar 10k libros</button>
+        <button class="btn btn-primary" type="button" ng-click="vm.addBook(-10000)">Substract 10k books</button>
       </div>
 
-      <div class="personal"><span class="glyphicon glyphicon-book"> Entregué {{vm.ownTotal | number}}</div>
+      <div class="personal">I delivered {{vm.ownTotal | number}} <span class="glyphicon glyphicon-book"></span></div>
